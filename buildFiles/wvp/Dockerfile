@@ -1,6 +1,8 @@
 FROM ubuntu:20.04   as   build
 
-ARG gitUrl="https://github.com/648540858/wvp-GB28181-pro"
+# ARG gitUrl="https://github.com/648540858/wvp-GB28181-pro"
+# github 国内加速
+ARG gitUrl="https://gh-proxy.com/https://github.com/648540858/wvp-GB28181-pro"
 
 COPY sources.list /etc/apt/sources.list
 

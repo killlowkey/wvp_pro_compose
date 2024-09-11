@@ -93,6 +93,14 @@ services:
     environment:
       TZ: ${TZ}
     ports:
+      - ${ZLM_RTSP_PORT}:${ZLM_RTSP_PORT}/udp
+      - ${ZLM_RTSP_PORT}:${ZLM_RTSP_PORT}/tcp
+      - ${ZLM_SRT_PORT}:${ZLM_SRT_PORT}/udp
+      - ${ZLM_SRT_PORT}:${ZLM_SRT_PORT}/tcp
+      - ${ZLM_RTC_PORT}:${ZLM_RTC_PORT}/udp
+      - ${ZLM_RTC_PORT}:${ZLM_RTC_PORT}/tcp
+      - ${ZLM_RTMP_PORT}:${ZLM_RTMP_PORT}/udp
+      - ${ZLM_RTMP_PORT}:${ZLM_RTMP_PORT}/tcp
       - ${STREAM_PORT}:${STREAM_PORT}/udp
       - ${STREAM_PORT}:${STREAM_PORT}/tcp
       - 3001:3001
